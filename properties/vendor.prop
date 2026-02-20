@@ -1,0 +1,16 @@
+# TEE
+ro.vendor.mtk_trustonic_tee_support=1
+ro.vendor.mtk_tee_gp_support=1
+
+# Storage
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mtk_ufs_support=1
+
+# Sensors
+ro.vendor.mtk.sensor.support=yes
+ro.vendor.init.sensor.rc=init.sensor_1_0.rc
+
+# MediaTek
+ro.soc.model=MT6785
+ro.soc.manufacturer=MediaTek
