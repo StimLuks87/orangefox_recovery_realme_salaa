@@ -50,7 +50,7 @@ OF_SPLASH_MAX_SIZE=130
 
 # Other OrangeFox Vars
 FOX_ENABLE_APP_MANAGER=1
-FOX_USE_SPECIFIC_MAGISK_ZIP="/home/luks/OrangeFox_sync/fox_12.1/device/realme/salaa/Magisk/Magisk-v30.6.zip"
+FOX_USE_SPECIFIC_MAGISK_ZIP="/home/runner/work/OrangeFox-Action-Builder/OrangeFox-Action-Builder/OrangeFox/fox_12.1/device/realme/salaa/Magisk/Magisk-v30.6.zip"
 FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"  # Sun 21 Mar 04:26:40 GMT 2021
 FOX_REMOVE_BUSYBOX_BINARY=1
 FOX_DELETE_AROMAFM=1
