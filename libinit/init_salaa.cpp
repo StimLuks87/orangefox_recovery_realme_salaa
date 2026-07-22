@@ -108,6 +108,20 @@ void set_device_props(void) {
         }
     }
 
+        if (!fingerprint.empty()) {
+        property_override("ro.build.fingerprint", fingerprint.c_str());
+
+        static const std::vector<std::string> prop_types = {
+            "",        "bootimage.", "odm.",    "odm_dlkm.",   "product.",
+            "system.", "system_ext.", "vendor.", "vendor_dlkm."
+        };
+
+        for (const auto& source : prop_types) {
+            std::string prop = "ro." + source + "build.fingerprint";
+            property_override(prop.c_str(), fingerprint.c_str());
+        }
+    }
+    
     // Set build properties
     set_ro_build_prop("model", model);
     set_ro_build_prop("device", device);
@@ -117,8 +131,7 @@ void set_device_props(void) {
     // Additional properties
     property_override("ro.vendor.device", device.c_str());
     property_override("ro.product.device", device.c_str());
-    property_override("ro.build.fingerprint", fingerprint.c_str());
-    property_override("ro.recovery.ui.animation_fps", "60");
+    property_override("ro.recovery.ui.animation_fps", "90");
 }
 
 void vendor_load_properties(void) {
